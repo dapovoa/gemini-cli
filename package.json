@@ -61,7 +61,8 @@
     "wrap-ansi": "9.0.2",
     "cliui": {
       "wrap-ansi": "7.0.0"
-    }
+    },
+    "react-devtools-core": "$react-devtools-core"
   },
   "bin": {
     "gemini": "bundle/gemini.js"
@@ -94,6 +95,7 @@
     "globals": "^16.0.0",
     "google-artifactregistry-auth": "^3.4.0",
     "husky": "^9.1.7",
+    "ink-testing-library": "^4.0.0",
     "json": "^11.0.0",
     "lint-staged": "^16.1.6",
     "memfs": "^4.42.0",
@@ -102,7 +104,7 @@
     "msw": "^2.10.4",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.5.3",
-    "react-devtools-core": "^4.28.5",
+    "react-devtools-core": "^6.1.2",
     "semver": "^7.7.2",
     "strip-ansi": "^7.1.2",
     "tsx": "^4.20.3",

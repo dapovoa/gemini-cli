@@ -11,7 +11,7 @@ export default defineConfig({
   test: {
     include: ['**/*.{test,spec}.?(c|m)[jt]s?(x)', 'config.test.ts'],
     exclude: ['**/node_modules/**', '**/dist/**', '**/cypress/**'],
-    environment: 'jsdom',
+    environment: 'node',
     globals: true,
     reporters: ['default', 'junit'],
     silent: true,
