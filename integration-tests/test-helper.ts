@@ -985,6 +985,7 @@ export class TestRig {
         Object.entries(env).filter(([, v]) => v !== undefined),
       ) as { [key: string]: string },
     };
+    options.env['GEMINI_CLI_INTERACTIVE_TEST'] = 'true';
 
     const executable = command === 'node' ? process.execPath : command;
     const ptyProcess = pty.spawn(executable, commandArgs, options);

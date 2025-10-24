@@ -503,6 +503,7 @@ export async function loadCliConfig(
   // Interactive mode: explicit -i flag or (TTY + no args + no -p flag)
   const hasQuery = !!argv.query;
   const interactive =
+    !!process.env['GEMINI_CLI_INTERACTIVE_TEST'] ||
     !!argv.promptInteractive ||
     (process.stdin.isTTY && !hasQuery && !argv.prompt);
   // In non-interactive mode, exclude tools that require a prompt.
