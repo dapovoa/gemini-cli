@@ -493,7 +493,8 @@ describe('useCommandCompletion', () => {
     it('should not trigger prompt completion for line comments', async () => {
       const mockConfig = {
         getEnablePromptCompletion: () => true,
-      } as Config;
+        getGeminiClient: vi.fn(),
+      } as unknown as Config;
 
       let hookResult: ReturnType<typeof useCommandCompletion> & {
         textBuffer: ReturnType<typeof useTextBuffer>;
@@ -523,7 +524,8 @@ describe('useCommandCompletion', () => {
     it('should not trigger prompt completion for block comments', async () => {
       const mockConfig = {
         getEnablePromptCompletion: () => true,
-      } as Config;
+        getGeminiClient: vi.fn(),
+      } as unknown as Config;
 
       let hookResult: ReturnType<typeof useCommandCompletion> & {
         textBuffer: ReturnType<typeof useTextBuffer>;
@@ -555,7 +557,8 @@ describe('useCommandCompletion', () => {
     it('should trigger prompt completion for regular text when enabled', async () => {
       const mockConfig = {
         getEnablePromptCompletion: () => true,
-      } as Config;
+        getGeminiClient: vi.fn(),
+      } as unknown as Config;
 
       let hookResult: ReturnType<typeof useCommandCompletion> & {
         textBuffer: ReturnType<typeof useTextBuffer>;
