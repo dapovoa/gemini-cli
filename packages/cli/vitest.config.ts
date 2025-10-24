@@ -6,6 +6,10 @@
 
 /// <reference types="vitest" />
 import { defineConfig } from 'vitest/config';
+import { fileURLToPath } from 'node:url';
+import * as path from 'node:path';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   test: {
@@ -17,6 +21,9 @@ export default defineConfig({
     silent: true,
     outputFile: {
       junit: 'junit.xml',
+    },
+    alias: {
+      react: path.resolve(__dirname, '../../node_modules/react'),
     },
     setupFiles: ['./test-setup.ts'],
     coverage: {
