@@ -2,10 +2,11 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "dist",
+    "declarationDir": "dist/types",
     "lib": ["DOM", "DOM.Iterable", "ES2023"],
     "composite": true,
     "types": ["node", "vitest/globals"]
   },
-  "include": ["index.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.json"],
+  "include": ["index.ts", "src/**/*.ts", "src/**/*.json"],
   "exclude": ["node_modules", "dist"]
 }
