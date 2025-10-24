@@ -63,8 +63,6 @@ const external = [
   '@lydell/node-pty-win32-arm64',
   '@lydell/node-pty-win32-x64',
   'react-devtools-core',
-  'express',
-  'ink-spinner',
   'ink',
 ];
 
